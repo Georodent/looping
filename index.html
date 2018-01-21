@@ -2,32 +2,95 @@
 <html>
 <head>
   <title>Loop the Loop</title>
+  
   <style type="text/css">
+    
     body {
       font-family: sans-serif;
       background-color: beige;
     }
-    img {
-      max-width: 100%;
-      border: 4px solid green;
-      margin-left: 10vw;
-      margin-right: auto;
-    }
     h1  {
-      text-align: center;
-      background-color: aquamarine;
+      text-shadow: 10px 10px 10px grey;
     }
     .red {
       color: red;
     }
+    img  {
+      width: 100%;
+      border: 3px solid white;
+      box-shadow: 5px 5px 5px grey;
+    }
+    /*  SECTIONS  */
+    .section {
+	  clear: both;
+	  padding: 0px;
+	  margin: 0px;
+    }
+
+      /*  COLUMN SETUP  */
+    .col {
+	  display: block;
+	  float:left;
+	  margin: 1% 0 1% 1.6%;
+    }
+    .col:first-child { margin-left: 0; }
+
+
+      /*  GROUPING  */
+    .group:before,
+    .group:after {
+	  content:"";
+	  display:table;
+    }
+    .group:after {
+	  clear:both;
+    }
+    .group {
+      zoom:1; /* For IE 6/7 */
+    }
+
+      /*  GRID OF THREE  */
+    .span_3_of_3 {
+	  width: 100%;
+    }
+    .span_2_of_3 {
+	  width: 66.1%;
+    }
+    .span_1_of_3 {
+	  width: 32.2%;
+    }
+
+      /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { margin: 1% 0 1% 0%;}
+	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
+    }
+    
   </style>
 </head>
+  
 <body>
-  <h1>Whee!</h1>
-
-  <img id="roller" src="" alt="roller coaster">
+  
+  <header>
+    <marquee behavior="scroll" direction="left" scrollamount="10">
+    <h1>Whee!</h1>
+    </marquee>
+  </header>
+  
+  <div class="section group">
+	<div class="col span_1_of_3">
+	</div>
+	<div class="col span_1_of_3">
+	  <img id="roller" src="" alt="roller coaster">
+	</div>
+	<div class="col span_1_of_3">
+	</div>
+  </div>
+  
 
   <script type="text/javascript">
+    
     // Description:
 
     // When complete, this program will ask the user how many roller coaster rides
@@ -85,4 +148,7 @@
   </script>
 
 </body>
+<footer>
+  <article></article>  
+</footer>
 </html>
