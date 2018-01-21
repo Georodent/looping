@@ -62,7 +62,7 @@
 
       /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
-@media only screen and (max-width: 480px) {
+    @media only screen and (max-width: 480px) {
 	.col { margin: 1% 0 1% 0%;}
 	.span_3_of_3, .span_2_of_3, .span_1_of_3 { width: 100%; }
     }
@@ -74,7 +74,7 @@
   <!--I know the marquee is not used anymore, but it was so fitting!!! -->
   <header>
     <marquee behavior="scroll" direction="left" scrollamount="10">
-    <h1>Whee!</h1>
+    <h1 id="whee">Whee!</h1>
     </marquee>
   </header>
   
@@ -124,7 +124,9 @@
     var counter = 1;
 
     // TODO: execute this loop the number of times user requested
-    while(counter <= howMany){
+    
+    //This is EXTRA CHALLENGE #2. If you remove * 2 from the conditional, it will count the user inputs, now it doubles it. 
+    while(counter <= howMany * 2){
       console.log("Wheee! This is the ", counter, " time we've done this!");
 
       // find value of counter modulo length of sources array-
@@ -144,7 +146,12 @@
     // 2. Execute the loop only half as many times, or twice as many times, as the user requested.
     // 3. Add a pause to each loop, so user can see each image as it cycles past.
     //    This is a difficult one!
-
+    
+    
+    //This is EXTRA CHALLENGE #1. 
+    var d = document.getElementById("whee");
+    d.className += "red";
+    
   </script>
 
 </body>
