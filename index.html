@@ -74,7 +74,7 @@
   <!--I know the marquee is not used anymore, but it was so fitting!!! -->
   <header>
     <marquee behavior="scroll" direction="left" scrollamount="10">
-    <h1 id="whee">Whee!</h1>
+      <h1 id="whee">Whee!</h1>
     </marquee>
   </header>
   
@@ -111,15 +111,17 @@
       "http://cdn.cnn.com/cnnnext/dam/assets/160520171710-07-stormchaser-jpg-best-coasters-super-169.jpg",
       "https://thediabeticjourney.com/wp-content/uploads/2016/08/diabetes-rollercoaster.png"
     ]
-
+    
     // select the <img> tag with id of "roller" from the HTML
     var theImg = document.querySelector("img#roller");
-
+   
     // set the src attribute of the img to be the first element in source array
     theImg.setAttribute("src", imageSources[0]);
+    
+    
 
     // TODO: set howMany variable to a value user inputs
-    var howMany = prompt ("How many times would you like to ride the roller coaster?")
+    var howMany = prompt ("How many times would you like to ride the roller coaster?");
     
     var counter = 1;
 
@@ -138,6 +140,7 @@
       
       // TODO: increment the counter
       counter = counter + 1;
+      
     }
     
     // EXTRA CHALLENGES:
